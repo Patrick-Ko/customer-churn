@@ -95,9 +95,12 @@ if st.session_state.clicked[1]:
             # Make predictions
             predictions = model.predict(data)
 
+            # Map predictions to churn labels
+            data['Prediction'] = predictions
+            data['Prediction'] = data['Prediction'].map({1: 'Churn', 0: 'Not Churn'})
+
             # Display predictions
             st.write("Prediction Results:")
-            data['Prediction'] = predictions
             st.dataframe(data)
 
             # Provide download option
