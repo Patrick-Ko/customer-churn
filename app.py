@@ -10,7 +10,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 st.write("This app predicts customer churn using a Random Forest Classifier. Please open the side panel for information on dataset upload.")
-st.write("Click the 'Let's Predict' button when you are ready.")
+st.write("Click the 'Lets Predict' button when you are ready.")
 st.markdown("<style>body{text-align: left;}</style>", unsafe_allow_html=True)
 
 with st.sidebar:
